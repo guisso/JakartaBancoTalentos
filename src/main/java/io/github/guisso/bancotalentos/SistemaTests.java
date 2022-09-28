@@ -34,7 +34,6 @@
 package io.github.guisso.bancotalentos;
 
 import io.github.guisso.bancotalentos.categoria.Categoria;
-import io.github.guisso.bancotalentos.credencial.Perfil;
 import io.github.guisso.bancotalentos.telefone.Telefone;
 import io.github.guisso.bancotalentos.docente.Docente;
 import io.github.guisso.bancotalentos.docente.DocenteBeanLocal;
@@ -92,7 +91,7 @@ public class SistemaTests extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             
             // Discente 1
-            Credencial c2 = new Credencial("beatriz@mail.com", "123456", Perfil.OPERADOR, true);
+            Credencial c2 = new Credencial("beatriz@mail.com", "123456", Credencial.Perfil.OPERADOR, true);
 
             Discente discente1 = new Discente(777888999L);
             discente1.setNome("Beatriz Yana");
@@ -138,7 +137,7 @@ public class SistemaTests extends HttpServlet {
             discente1.getProficiencias().add(prof2);
             
             // Discente 2
-            Credencial c3 = new Credencial("cecilia@mail.com", "jklçjklç", Perfil.OPERADOR, false);
+            Credencial c3 = new Credencial("cecilia@mail.com", "jklçjklç", Credencial.Perfil.OPERADOR, false);
             
             Discente discente2 = new Discente(777888999L);
             discente2.setNome("Cecília Xerxes");
@@ -146,7 +145,7 @@ public class SistemaTests extends HttpServlet {
             discente2.setCredencial(c3);
             
             // Docente
-            Credencial c1 = new Credencial("ana@mail.com", "asdf123", Perfil.GERENTE, true);
+            Credencial c1 = new Credencial("ana@mail.com", "asdf123", Credencial.Perfil.GERENTE, true);
 
             Docente docente1 = new Docente(963852741L);
             docente1.setNome("Ana Zaira");

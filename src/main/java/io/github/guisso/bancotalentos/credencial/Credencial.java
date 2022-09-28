@@ -73,6 +73,12 @@ public class Credencial implements Serializable {
     @JsonbTransient
     private Usuario usuario;
 
+    public enum Perfil {
+        ADMINISTRADOR,
+        GERENTE,
+        OPERADOR;
+    }
+
     //<editor-fold defaultstate="collapsed" desc="Constructors">
     public Credencial() {
         perfil = Perfil.OPERADOR;
